@@ -10,7 +10,7 @@ describe("SearchImagePage", () => {
   describe('error', () => {
     context("Guest", () => {
       it("it asks guest user to signup", async () => {
-
+        const expectedNumberOfCalls = 1
         const api = {
           fetch: vi.fn().mockImplementation(async () => ({ results: [0]}))
         }
@@ -40,8 +40,8 @@ describe("SearchImagePage", () => {
         await fireEvent.update(input, 'Planetas')
         await fireEvent.click(submitButton)
 
-        expect(spy).toHaveBeenCalled(5)
-        // expect(queryByText("Signup!")).toBeTruthy()
+        expect(spy).toHaveBeenCalledTimes(expectedNumberOfCalls)
+        // expect(await queryByText("Signup!")).resolves.toBeTruthy()
       })
     })
   })

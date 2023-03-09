@@ -86,7 +86,7 @@ describe("SearchImagePage", () => {
     })
   })
 
-  it.skip("renders image when search is done", async () => {
+  it("renders image when search is done", async () => {
     const { getByTestId, getByText, queryByTestId } = render(SearchImagePage);
 
     const input = getByTestId("image-search-input-api")

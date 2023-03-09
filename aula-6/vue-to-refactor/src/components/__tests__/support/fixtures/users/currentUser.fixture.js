@@ -1,6 +1,7 @@
 export const adminUser = {
   role: 'admin',
-  name: 'faker'
+  name: 'faker',
+  profile: null
 }
 
 export const guestUser = {
