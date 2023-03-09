@@ -1,0 +1,13 @@
+const api = {
+  fetch: async () => {
+    const API_URL = 'https://swapi.dev/api/planets'
+    const res = await fetch(API_URL, { method: 'GET' })
+    return await res.json()
+  }
+}
+
+export const fetchAPI = api.fetch
+
+export default {
+  namedExport: api.fetch
+}
